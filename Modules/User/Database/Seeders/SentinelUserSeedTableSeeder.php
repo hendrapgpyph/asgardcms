@@ -34,6 +34,9 @@ class SentinelUserSeedTableSeeder extends Seeder
         // Find the group using the group id
         $adminGroup = Sentinel::findRoleBySlug('admin');
 
+        // Give access token
+        app(\Modules\User\Repositories\UserTokenRepository::class)->generateFor($user->id);
+
         // Assign the group to the user
         $adminGroup->users()->attach($user);
     }
