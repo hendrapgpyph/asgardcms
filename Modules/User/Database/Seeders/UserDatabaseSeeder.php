@@ -17,5 +17,6 @@ class UserDatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(SentinelGroupSeedTableSeeder::class);
+        $this->call(SentinelUserSeedTableSeeder::class);
     }
 }
