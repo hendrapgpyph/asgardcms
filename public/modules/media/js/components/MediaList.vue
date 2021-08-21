@@ -9,7 +9,7 @@
                         <div class="media-breadcrumb">
                             <el-breadcrumb separator="/" v-if="! singleModal">
                                 <el-breadcrumb-item>
-                                   <router-link :to="{name : 'dashboard.index'}">{{ trans('core.breadcrumb.home') }}</router-link>
+                                    <router-link :to="{name : 'dashboard.index'}">{{ trans('core.breadcrumb.home') }}</router-link>
                                 </el-breadcrumb-item>
                                 <el-breadcrumb-item :to="{name: 'admin.media.media.index'}">{{ trans('media.breadcrumb.media') }}
                                 </el-breadcrumb-item>
