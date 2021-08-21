@@ -1,12 +1,12 @@
 <?php
 
 return [
-   /*
+    /*
    |--------------------------------------------------------------------------
    | The prefix that'll be used for the administration
    |--------------------------------------------------------------------------
    */
-    'admin-prefix' => 'backend',
+    'admin-prefix' => 'admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ return [
     | Which administration theme to use for the back end interface
     |--------------------------------------------------------------------------
     */
-    'admin-theme' => 'AdminLTE',
+    'admin-theme' => 'Adminpress',
 
     /*
     |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ return [
     */
     'skin' => 'skin-blue',
 
-   /*
+    /*
    |--------------------------------------------------------------------------
    | WYSIWYG Backend Editor
    |--------------------------------------------------------------------------
@@ -43,7 +43,7 @@ return [
    | - \Modules\Core\Events\Handlers\LoadCkEditor::class
    | - \Modules\Core\Events\Handlers\LoadSimpleMde::class
    */
-   'wysiwyg-handler' => \Modules\Core\Events\Handlers\LoadCkEditor::class,
+    'wysiwyg-handler' => \Modules\Core\Events\Handlers\LoadCkEditor::class,
     /*
     |--------------------------------------------------------------------------
     | Custom CKeditor configuration file
@@ -63,17 +63,16 @@ return [
     | Backend and Frontend routes.
     */
     'middleware' => [
-       'backend' => [
-           'auth.admin',
-       ],
-       'frontend' => [
-       ],
-       'api' => [
-           'api',
-       ],
+        'admin' => [
+            'auth.admin',
+        ],
+        'frontend' => [],
+        'api' => [
+            'api',
+        ],
     ],
 
-   /*
+    /*
    |--------------------------------------------------------------------------
    | Define which assets will be available through the asset manager
    |--------------------------------------------------------------------------
@@ -103,8 +102,8 @@ return [
         'mousetrap.js' => ['theme' => 'js/vendor/mousetrap.min.js'],
         'alertify.js' => ['theme' => 'js/vendor/alertify/alertify.js'],
         'icheck.js' => ['theme' => 'vendor/iCheck/icheck.min.js'],
-        'jquery.dataTables.js' => ['theme' => 'vendor/datatables.net/js/jquery.dataTables.min.js'],
-        'dataTables.bootstrap.js' => ['theme' => 'vendor/datatables.net-bs/js/dataTables.bootstrap.min.js'],
+        'jquery.dataTables.js' => ['theme' => 'plugins/datatables/jquery.dataTables.min.js'],
+        'dataTables.bootstrap.js' => ['theme' => 'plugins/datatables/dataTables.bootstrap.js'],
         'jquery.slug.js' => ['theme' => 'js/vendor/jquery.slug.js'],
         'adminlte.js' => ['theme' => 'vendor/admin-lte/dist/js/adminlte.min.js'],
         'keypressAction.js' => ['module' => 'core:js/keypressAction.js'],
@@ -125,6 +124,50 @@ return [
         'moment.js' => ['theme' => 'vendor/admin-lte/plugins/daterangepicker/moment.min.js'],
         'clipboard.js' => ['theme' => 'vendor/clipboard/dist/clipboard.min.js'],
         'simplemde.js' => ['theme' => 'vendor/simplemde/dist/simplemde.min.js'],
+
+        // adminpress CSS
+        'ap-bootstrap.css' => ['theme' => 'plugins/bootstrap/css/bootstrap.min.css'],
+        'ap-step-wizard.css' => ['theme' => 'plugins/wizard/steps.css'],
+        'ap-morris.css' => ['theme' => 'plugins/morrisjs/morris.css'],
+        'ap-custom-adminpress.css' => ['theme' => 'normal-mode/css/style.css'],
+        'ap-default-dark.css' => ['theme' => 'normal-mode/css/colors/default-dark.css'],
+        'ap-bootstrap-tagsinput.css' => ['theme' => 'plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css'],
+        'ap-jquery-fancybox.css' => ['theme' => 'plugins/fancybox/jquery.fancybox.css'],
+        'ap-select2.css' => ['theme' => 'plugins/select2/dist/css/select2.min.css'],
+        'ap-loading.css' => ['theme' => 'plugins/jquery-loading-master/src/loading.css'],
+        'ap-datepicker.css' => ['theme' => 'plugins/bootstrap-datepicker/bootstrap-datepicker.min.css'],
+        'ap-datetimepicker.css' => ['theme' => 'plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css'],
+        'ap-image-uploader.css' => ['theme' => 'plugins/drag-drop-image/dist/image-uploader.min.css'],
+        'ap-element-ui.css' => ['theme' => 'plugins/element-ui/element-ui.css'],
+        // AdminPress JS
+        'ap-jquery.js' => ['theme' => 'plugins/jquery/jquery.min.js'],
+        'ap-pooper.js' => ['theme' => 'plugins/bootstrap/js/popper.min.js'],
+        'ap-bootstrap.js' => ['theme' => 'plugins/bootstrap/js/bootstrap.min.js'],
+        'ap-slimscroll.js' => ['theme' => 'normal-mode/js/jquery.slimscroll.js'],
+        'ap-waves.js' => ['theme' => 'normal-mode/js/waves.js'],
+        'ap-sidebarmenu.js' => ['theme' => 'normal-mode/js/sidebarmenu.js'],
+        'ap-sticky-kit.js' => ['theme' => 'plugins/sticky-kit-master/dist/sticky-kit.min.js'],
+        'ap-custom.js' => ['theme' => 'normal-mode/js/custom.js'],
+        'ap.sparkline.js' => ['theme' => 'plugins/sparkline/jquery.sparkline.min.js'],
+        'ap-raphael.js' => ['theme' => 'plugins/raphael/raphael-min.js'],
+        'ap-morris.js' => ['theme' => 'plugins/morrisjs/morris.min.js'],
+        'ap-switcher.js' => ['theme' => 'plugins/styleswitcher/jQuery.style.switcher.js'],
+        'ap-validation.js' => ['theme' => 'normal-mode/js/validation.js'],
+        'ap-sweetalert2.js' => ['theme' => 'plugins/swal/sweetalert2.all.min.js'],
+        'ap-fancybox.js' => ['theme' => 'plugins/fancybox/jquery.fancybox.js'],
+        'ap-fancybox.pack.js' => ['theme' => 'plugins/fancybox/jquery.fancybox.pack.js'],
+        'ap-select2.full.js' => ['theme' => 'plugins/select2/dist/js/select2.full.min.js'],
+        'ap-loading.js' => ['theme' => 'plugins/jquery-loading-master/src/loading.js'],
+        'ap-steps.js' => ['theme' => 'plugins/wizard/jquery.steps.min.js'],
+        'ap-validate.js' => ['theme' => 'plugins/wizard/jquery.validate.min.js'],
+        'ap-locationpicker.js' => ['theme' => 'plugins/jquery-locationpicker-plugin-master/dist/locationpicker.jquery.js'],
+        'ap-moment.js' => ['theme' => 'plugins/moment/moment.js'],
+        'ap-bootstrap-datetimepicker.js' => ['theme' => 'plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js'],
+        'ap-bootstrap-datepicker.js' => ['theme' => 'plugins/bootstrap-datepicker/bootstrap-datepicker.min.js'],
+        'ap-bootstrap-tagsinput.js' => ['theme' => 'plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js'],
+        'ap-image-uploader.js' => ['theme' => 'plugins/drag-drop-image/dist/image-uploader.js'],
+        'fa-fontawesome.js' => ['theme' => 'plugins/fontawesome/fontawesome.js'],
+        'fa-solid.js' => ['theme' => 'plugins/fontawesome/solid.js']
     ],
 
     /*
@@ -133,34 +176,56 @@ return [
     | through the asset pipeline
     |--------------------------------------------------------------------------
     */
+    // asgard AdminPress default assets
     'admin-required-assets' => [
         'css' => [
-            'bootstrap.css',
-            'font-awesome.css',
-            'dataTables.bootstrap.css',
-            'icheck.blue.css',
-            'AdminLTE.css',
-            'AdminLTE.all.skins.css',
-            'animate.css',
-            'pace.css',
-            'selectize-default.css',
-            'asgard.css',
+            'ap-bootstrap.css',
+            'ap-step-wizard.css',
+            'ap-morris.css',
+            'ap-custom-adminpress.css',
+            'ap-default-dark.css',
+            'ap-bootstrap-tagsinput.css',
+            'ap-jquery-fancybox.css',
+            'ap-select2.css',
+            'ap-loading.css',
+            'ap-datepicker.css',
+            'ap-datetimepicker.css',
+            'ap-image-uploader.css',
+            'ap-element-ui.css',
         ],
         'js' => [
-            'bootstrap.js',
-            'mousetrap.js',
-            'icheck.js',
+            'ap-jquery.js',
+            'ap-pooper.js',
+            'ap-bootstrap.js',
+            'ap-slimscroll.js',
+            'ap-waves.js',
+            'ap-sidebarmenu.js',
+            'ap-sticky-kit.js',
+            // 'ap-custom.js',
+            'ap.sparkline.js',
+            'ap-raphael.js',
+            'ap-morris.js',
+            'ap-switcher.js',
+            'ap-validation.js',
+            'ap-sweetalert2.js',
+            'ap-fancybox.js',
+            'ap-fancybox.pack.js',
+            'ap-select2.full.js',
+            'ap-loading.js',
+            'ap-steps.js',
+            'ap-validate.js',
+            // 'ap-locationpicker.js',
+            'ap-moment.js',
+            'ap-bootstrap-datetimepicker.js',
+            'ap-bootstrap-datepicker.js',
+            'ap-bootstrap-tagsinput.js',
+            'ap-image-uploader.js',
+            'fa-solid.js',
+            'fa-fontawesome.js',
             'jquery.dataTables.js',
-            'dataTables.bootstrap.js',
-            'jquery.slug.js',
-            'keypressAction.js',
-            'adminlte.js',
-            'pace.js',
-            'selectize.js',
-            'main.js',
+            // 'keypressAction.js',
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Enable module view overrides at theme locations

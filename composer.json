@@ -13,12 +13,24 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.5",
         "laravel/tinker": "~1.0",
+        "dimsav/laravel-translatable": "^8.1",
         "nwidart/laravel-modules": "~2.0",
-        "cartalyst/sentinel": "~2.0",
+       "cartalyst/sentinel": "~2.0",
         "idavoll/flatly-theme": "~3.0",
-        "idavoll/adminlte-theme": "~3.0"
+        "idavoll/adminlte-theme": "~3.0",
+        "laracasts/presenter": "0.2.4",
+        "floatingpoint/stylist": "~0.5.0",
+        "maatwebsite/laravel-sidebar": "^2.4",
+        "mcamara/laravel-localization": "^1.6",
+        "typicms/nestablecollection": "^1.1",
+        "tightenco/ziggy": "^0.9.4",
+        "doctrine/dbal": "^2.11",
+        "intervention/image": "^2.6.1",
+        "nwidart/laravel-menus" : "1.0.0",
+        "venturecraft/revisionable": "1.38.0",
+        "symfony/yaml": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

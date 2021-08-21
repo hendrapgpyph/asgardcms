@@ -1,7 +1,7 @@
 <?php
 
 return [
-   /*
+    /*
    |--------------------------------------------------------------------------
    | The prefix that'll be used for the administration
    |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ return [
     */
     'skin' => 'skin-blue',
 
-   /*
+    /*
    |--------------------------------------------------------------------------
    | WYSIWYG Backend Editor
    |--------------------------------------------------------------------------
@@ -43,7 +43,7 @@ return [
    | - \Modules\Core\Events\Handlers\LoadCkEditor::class
    | - \Modules\Core\Events\Handlers\LoadSimpleMde::class
    */
-   'wysiwyg-handler' => \Modules\Core\Events\Handlers\LoadCkEditor::class,
+    'wysiwyg-handler' => \Modules\Core\Events\Handlers\LoadCkEditor::class,
     /*
     |--------------------------------------------------------------------------
     | Custom CKeditor configuration file
@@ -63,23 +63,22 @@ return [
     | Backend and Frontend routes.
     */
     'middleware' => [
-       'admin' => [
-           'auth.admin',
-       ],
-       'frontend' => [
-       ],
-       'api' => [
-           'api',
-       ],
+        'admin' => [
+            'auth.admin',
+        ],
+        'frontend' => [],
+        'api' => [
+            'api',
+        ],
     ],
 
-   /*
+    /*
    |--------------------------------------------------------------------------
    | Define which assets will be available through the asset manager
    |--------------------------------------------------------------------------
    | These assets are registered on the asset manager
    */
-  'admin-assets' => [
+    'admin-assets' => [
         // Css
         'bootstrap.css' => ['theme' => 'vendor/bootstrap/dist/css/bootstrap.min.css'],
         'font-awesome.css' => ['cdn' => 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'],
@@ -103,8 +102,8 @@ return [
         'mousetrap.js' => ['theme' => 'js/vendor/mousetrap.min.js'],
         'alertify.js' => ['theme' => 'js/vendor/alertify/alertify.js'],
         'icheck.js' => ['theme' => 'vendor/iCheck/icheck.min.js'],
-        'jquery.dataTables.js' => ['theme' => 'vendor/datatables.net/js/jquery.dataTables.min.js'],
-        'dataTables.bootstrap.js' => ['theme' => 'vendor/datatables.net-bs/js/dataTables.bootstrap.min.js'],
+        'jquery.dataTables.js' => ['theme' => 'plugins/datatables/jquery.dataTables.min.js'],
+        'dataTables.bootstrap.js' => ['theme' => 'plugins/datatables/dataTables.bootstrap.js'],
         'jquery.slug.js' => ['theme' => 'js/vendor/jquery.slug.js'],
         'adminlte.js' => ['theme' => 'vendor/admin-lte/dist/js/adminlte.min.js'],
         'keypressAction.js' => ['module' => 'core:js/keypressAction.js'],
@@ -148,7 +147,7 @@ return [
         'ap-waves.js' => ['theme' => 'normal-mode/js/waves.js'],
         'ap-sidebarmenu.js' => ['theme' => 'normal-mode/js/sidebarmenu.js'],
         'ap-sticky-kit.js' => ['theme' => 'plugins/sticky-kit-master/dist/sticky-kit.min.js'],
-        'ap-custom.js' => ['theme' => 'normal-mode/js/custom.js'],         
+        'ap-custom.js' => ['theme' => 'normal-mode/js/custom.js'],
         'ap.sparkline.js' => ['theme' => 'plugins/sparkline/jquery.sparkline.min.js'],
         'ap-raphael.js' => ['theme' => 'plugins/raphael/raphael-min.js'],
         'ap-morris.js' => ['theme' => 'plugins/morrisjs/morris.min.js'],
@@ -169,7 +168,7 @@ return [
         'ap-image-uploader.js' => ['theme' => 'plugins/drag-drop-image/dist/image-uploader.js'],
         'fa-fontawesome.js' => ['theme' => 'plugins/fontawesome/fontawesome.js'],
         'fa-solid.js' => ['theme' => 'plugins/fontawesome/solid.js']
-],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -177,8 +176,8 @@ return [
     | through the asset pipeline
     |--------------------------------------------------------------------------
     */
-     // asgard AdminPress default assets
-     'admin-required-assets' => [
+    // asgard AdminPress default assets
+    'admin-required-assets' => [
         'css' => [
             'ap-bootstrap.css',
             'ap-step-wizard.css',
@@ -222,7 +221,9 @@ return [
             'ap-bootstrap-tagsinput.js',
             'ap-image-uploader.js',
             'fa-solid.js',
-            'fa-fontawesome.js'
+            'fa-fontawesome.js',
+            'jquery.dataTables.js',
+            // 'keypressAction.js',
         ],
     ],
     /*

@@ -2,7 +2,7 @@
     <el-button
             size="mini"
             @click.prevent="goToEditPage()">
-        <i class="fa fa-pencil"></i>
+        <i class="fa fa-edit"></i>
     </el-button>
 </template>
 
