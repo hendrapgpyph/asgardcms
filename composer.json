@@ -29,7 +29,8 @@
         "doctrine/dbal": "^2.11",
         "intervention/image": "^2.6.1",
         "nwidart/laravel-menus" : "1.0.0",
-        "venturecraft/revisionable": "1.38.0"
+        "venturecraft/revisionable": "1.38.0",
+        "symfony/yaml": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
